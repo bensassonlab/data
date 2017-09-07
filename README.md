@@ -1,6 +1,6 @@
 # data
 
-## Data used in Tilakaratna and Bensasson (unpublished)
+## Data used in [Tilakaratna and Bensasson](http://www.g3journal.org/content/7/9/2919)
 
 ### CEN1.tree to CEN16.tree
 
