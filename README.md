@@ -19,9 +19,9 @@ These are 16 alignments in gapped fasta format for centromeres and flanking DNA 
 
 ### TilakaratnaBensasson17
 
-**Bensasson_etalTableS2.tsv**
+**Bensasson_etalTableS3.tsv**
 
-Table S2 referred to in the manuscript. This is a table in text format with tab separated values summarizing heterozygosity analyses for every strain. This includes exact counts of high quality heterozygous base calls (highQualityHetCount); the total length of high quality sequence (highQualityLength; bases with a phred-scaled quality score over 40); the proportion of high quality heterozygous sites; the length of regions that have undergone Loss of Heterozygosity (LOHlength) assessed in 100 kb windows;  heterozygosity analysis after excluding LOH regions, centromeres and annotated repeats (annotationLohFilteredHetCount, annotationLohFilteredLength, annotationLohFilteredHeterozygosity); heterozygosity analysis after excluding LOH regions, centromeres and annotated repeats, and regions with more than double the expected read depth (depthFilteredHetCount, depthFilteredLength, depthFilteredHeterozygosity); heterozygosity analysis at 948,860 nucleotide sites that are common to all strains (sitesIn950kbHetCount, sitesIn950kbLength, sitesIn950kbHeterozygosity).
+Table S3 referred to in the manuscript. This is a table in text format with tab separated values summarizing heterozygosity analyses for every strain. This includes exact counts of high quality heterozygous base calls (highQualityHetCount); the total length of high quality sequence (highQualityLength; bases with a phred-scaled quality score over 40); the proportion of high quality heterozygous sites; the length of regions that have undergone Loss of Heterozygosity (LOHlength) assessed in 100 kb windows;  heterozygosity analysis after excluding LOH regions, centromeres and annotated repeats (annotationLohFilteredHetCount, annotationLohFilteredLength, annotationLohFilteredHeterozygosity); heterozygosity analysis after excluding LOH regions, centromeres and annotated repeats, and regions with more than double the expected read depth (depthFilteredHetCount, depthFilteredLength, depthFilteredHeterozygosity); heterozygosity analysis at 948,860 nucleotide sites that are common to all strains (sitesIn950kbHetCount, sitesIn950kbLength, sitesIn950kbHeterozygosity).
 
 **bchr1.mfa.zip** to **bchrR.mfa.zip**
 
