@@ -7,6 +7,8 @@
 
 ### TilakaratnaBensasson17
 
+Tilakaratna, V., Bensasson, D., 2017. Habitat Predicts Levels of Genetic Admixture in Saccharomyces cerevisiae. G3: Genes, Genomes, Genetics g3.117.041806. https://doi.org/10.1534/g3.117.041806
+
 **CEN1.tree** to **CEN16.tree**
  
 These are 16 neighbour joining F84 distance trees in Newick format: one for each of 16 centromere loci in Saccharomyces cerevisiae. The bootstrap values shown are from a total of 10,000 bootstraps, and trees are unrooted. The 80 S. cerevisiae strains shown in each tree were completely homozygous and are fully described in Table S1 of Tilakaratna and Bensasson. 
@@ -17,7 +19,13 @@ These are 16 alignments in gapped fasta format for centromeres and flanking DNA 
 
 ## Data and scripts used in Bensasson et al 2018
 
-### Bensasson_etal2018
+Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2018. Diverse lineages of Candida albicans live on old oaks. Genetics (in press). Previously in: bioRxiv 341032. https://doi.org/10.1101/341032
+
+### Bensasson\_etal2018
+
+**Bensasson etalTableS1.xlsx**
+
+Table S1 referred to in the Bensasson et al 2018 paper.
 
 **Bensasson_etalTableS3.tsv**
 
