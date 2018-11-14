@@ -1,22 +1,5 @@
 # data
 
-## Summary of strain names, run names and accessions for genome data in [Almeida et al 2015](http://onlinelibrary.wiley.com/doi/10.1111/mec.13341/abstract)
-**EBI-ENA Data Archive Scerevisiae DB.tsv**
-
-## Data used in [Tilakaratna and Bensasson](http://www.g3journal.org/content/7/9/2919)
-
-### TilakaratnaBensasson17
-
-Tilakaratna, V., Bensasson, D., 2017. Habitat Predicts Levels of Genetic Admixture in Saccharomyces cerevisiae. G3: Genes, Genomes, Genetics g3.117.041806. https://doi.org/10.1534/g3.117.041806
-
-**CEN1.tree** to **CEN16.tree**
- 
-These are 16 neighbour joining F84 distance trees in Newick format: one for each of 16 centromere loci in Saccharomyces cerevisiae. The bootstrap values shown are from a total of 10,000 bootstraps, and trees are unrooted. The 80 S. cerevisiae strains shown in each tree were completely homozygous and are fully described in Table S1 of Tilakaratna and Bensasson. 
-
-**CEN1forcbyc.gfa** to **CEN1forcbyc.gfa**
-
-These are 16 alignments in gapped fasta format for centromeres and flanking DNA used to generate the trees.
-
 ## Data used in Bensasson et al 2018
 
 Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2018. Diverse lineages of Candida albicans live on old oaks. Genetics (in press). Previously in: bioRxiv 341032. https://doi.org/10.1101/341032
@@ -44,4 +27,22 @@ The whole chromosome alignments of 62 strains that were concatenated (using alca
 **Alignments of Hirakawa et al (2015) genomes**
 
 Our whole chromosome alignments of the short-read genome data published in Hirakawa et al (2015; doi: 10.1101/gr.174623.114) are the example dataset (chr1.mfa to chrR.mfa) in faChrompaintData/. They were generated in the same way as the bchr\*.mfa.zip alignments.
+
+## Data used in [Tilakaratna and Bensasson](http://www.g3journal.org/content/7/9/2919)
+
+### TilakaratnaBensasson17
+
+Tilakaratna, V., Bensasson, D., 2017. Habitat Predicts Levels of Genetic Admixture in Saccharomyces cerevisiae. G3: Genes, Genomes, Genetics g3.117.041806. https://doi.org/10.1534/g3.117.041806
+
+**CEN1.tree** to **CEN16.tree**
+ 
+These are 16 neighbour joining F84 distance trees in Newick format: one for each of 16 centromere loci in Saccharomyces cerevisiae. The bootstrap values shown are from a total of 10,000 bootstraps, and trees are unrooted. The 80 S. cerevisiae strains shown in each tree were completely homozygous and are fully described in Table S1 of Tilakaratna and Bensasson. 
+
+**CEN1forcbyc.gfa** to **CEN1forcbyc.gfa**
+
+These are 16 alignments in gapped fasta format for centromeres and flanking DNA used to generate the trees.
+
+## Summary of strain names, run names and accessions for genome data in [Almeida et al 2015](http://onlinelibrary.wiley.com/doi/10.1111/mec.13341/abstract)
+**EBI-ENA Data Archive Scerevisiae DB.tsv**
+
 
