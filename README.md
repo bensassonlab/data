@@ -17,11 +17,17 @@ These are 16 neighbour joining F84 distance trees in Newick format: one for each
 
 These are 16 alignments in gapped fasta format for centromeres and flanking DNA used to generate the trees.
 
-## Data and scripts used in Bensasson et al 2018
+## Data used in Bensasson et al 2018
 
 Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2018. Diverse lineages of Candida albicans live on old oaks. Genetics (in press). Previously in: bioRxiv 341032. https://doi.org/10.1101/341032
 
 ### Bensasson\_etal2018
+
+Data for ploidy and admixture analysis in Candida albicans
+
+## Data and scripts used in Bensasson et al 2018
+
+Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2018. Diverse lineages of Candida albicans live on old oaks. Genetics (in press). Previously in: bioRxiv 341032. https://doi.org/10.1101/341032
 
 **Bensasson etalTableS1.xlsx**
 
@@ -37,15 +43,5 @@ The whole chromosome alignments of 62 strains that were concatenated (using alca
 
 **Alignments of Hirakawa et al (2015) genomes**
 
-Our whole chromosome alignments of the short-read genome data published in Hirakawa et al (2015) doi: 10.1101/gr.174623.114 are the example dataset (chr1.mfa to chrR.mfa) in faChrompaintData/. They were generated in the same way as the bchr\*.mfa.zip alignments
-
-**Scripts used in Bensasson et al 2018**
-
-The following are freezes of the script versions used in Bensasson et al. 2018. There may be more up-to-date versions in https://github.com/bensassonlab/scripts/
-
-- alcat.pl
-- fa2phylip.pl
-- faChrompaint.pl
-- vcf2allelePlot.pl
-
+Our whole chromosome alignments of the short-read genome data published in Hirakawa et al (2015; doi: 10.1101/gr.174623.114) are the example dataset (chr1.mfa to chrR.mfa) in faChrompaintData/. They were generated in the same way as the bchr\*.mfa.zip alignments.
 
