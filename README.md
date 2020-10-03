@@ -1,8 +1,16 @@
 # data
 
-## Data used in Bensasson et al 2018
+## Data and scripts used in Scopel et al 2020
 
-Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2018. Diverse lineages of Candida albicans live on old oaks. Genetics (in press). Previously in: bioRxiv 341032. https://doi.org/10.1101/341032
+Scopel, E.F.C, Hose J., Bensasson D., Gasch, A.P. Genetic variation in aneuploidy prevalence and tolerance across the Saccharomyces cerevisiae phylogeny
+
+### scopel\_etal2020
+
+Data tables, alignments, trees and scripts used for phylogenetic and logistic regression (glm) analysis of aneuploidy, genetic clade, ecology, ploidy and heterozygosity in S. cerevisiae
+
+## Data used in Bensasson et al 2019
+
+Bensasson, D., Dicks, J., Ludwig, J.M., Bond, C.J., Elliston, A., Roberts, I.N., James, S.A., 2019. Diverse lineages of Candida albicans live on old oaks. Genetics Genetics 10.1534/genetics.118.301482
 
 ### Bensasson\_etal2018
 
