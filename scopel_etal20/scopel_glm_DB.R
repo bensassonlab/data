@@ -322,6 +322,13 @@ anova(cemodel10,cemodel10iii,test="Chi")
 
 # dropping clade: deviance=6.245376%, df 25, P =0.0988 and leaving in Ecological origins .. this is no longer significantly worse!
 model1noclade<-glm(gain~Ecological.origins,binomial)
+# GLM analyses and others by Douda Bensasson 
+# Analysis of Aug31 data with SSD1 info, Mixed Origins and Mosaic Beer included
+# excluded haploids, and 2 strains with clade assignments that we can't recapitulate
+# using the latest phylogeny to go through the clade simplification 
+
+dataAug31<-read.delim("peter_newAug31.txt",header=T,strip.white=T)
+data453<-read.csv("peter_scopel453strains.csv",header=T)
 anova(cemodel7,model1noclade,test="Chi")
 34.442/551.48
 
@@ -441,13 +448,14 @@ anova(scmodel6,scmodel7,test="Chi")
 
 
 # 25. Sake and 26. Asian fermentation are sister taxa and are SIG DIFF (df=1,P=5.51e-07)
-# It does not make sense to try to combine 24. Asian islands with 25 and 26 
+# It does not make sense to try to combine 24. Asian islands with 25 and 26  
 # because there was gain heterogeneity 
 clades8<-clades7
 levels(clades8)[17:18]<-"Clades25_26"
 levels(clades8)
 scmodel8<-glm(gain~clades8,binomial)
 anova(scmodel7,scmodel8,test="Chi")
+
 
 # 23. North American oak and 22. Far East Russian are sister taxa and are NOT SIG DIFF (df=1,no P: deviance is tiny?)
 # It does not make sense to try to combine with 24. Asian islands, 25 and 26 
@@ -497,7 +505,7 @@ tapply(predict(scmodel12,type="response"),clades12,mean)
 
 
 ##########
-# Using the TreeMix tree (6 edges) to decide _a priori_ contrasts
+# Using the TreeMix tree (8 edges w/ jackknifing) to decide _a priori_ contrasts
 
 # Wine, Alpechin and Brazilian bioethanol all combine into Clades1_2_3 as above 
 anova(scmodel3,test="Chi")
@@ -543,30 +551,31 @@ levels(tmclades9)
 tmodel9<-glm(gain~tmclades9,binomial)
 anova(tmodel8,tmodel9,test="Chi")
 
-# 12. West African cocoa and 13. African palm wine human are sister taxa and are NOT SIG DIFF (df=1,P=0.08587) 
-# It does not make sense to try to combine all the groups tested so far 
+# 12. West African cocoa and 21. Ecuadorean are sister taxa and are NOT SIG DIFF (df=1,P=0.173) 
+# It does not make sense to try to combine with Far_East_Russian, African_palm_wine 
 # because there was gain heterogeneity 
 tmclades10<-tmclades8
-levels(tmclades10)[4:5]<-"Clades12_13"
+levels(tmclades10)[4]<-"Clades12_21"
+levels(tmclades10)[13]<-"Clades12_21"
 levels(tmclades10)
 tmodel10<-glm(gain~tmclades10,binomial)
 anova(tmodel8,tmodel10,test="Chi")
 
-# 20. CHN V and 21. Ecuadorean are sister taxa and are NOT SIG DIFF  (df=1,P=0.5154) as above 
+# 20. CHN V and 19. Malaysian are sister taxa and are NOT SIG DIFF  (deviance is tiny, 5.6843e-14) 
 # It does not make sense to try to combine all the groups tested so far 
 # because there was gain heterogeneity 
 tmclades11<-tmclades10
-levels(tmclades11)[11:12]<-"Clades20_21"
+levels(tmclades11)[11:12]<-"Clades19_20"
 levels(tmclades11)
 tmodel11<-glm(gain~tmclades11,binomial)
 anova(tmodel10,tmodel11,test="Chi")
 
 
-# Combine all clades with the ancestral proportion of chr2-16 gains (df=16,P=0.1691,AIC=487.27), just 3 proportions 
+# Combine all clades with the ancestral proportion of chr2-16 gains (df=16,P=0.1201,AIC=487.27), just 3 proportions 
 tmclades12<-tmclades11
 levels(tmclades12)[1:2]<-"ancestral"
 levels(tmclades12)[3:13]<-"ancestral"
-levels(tmclades12)[4:7]<-"ancestral" # merge in 5. French dairy and 6. French dairy now because they do not form a monophyletic group
+levels(tmclades12)[4:7]<-"ancestral" # merge in 5. French dairy and 6. African beer now because they do not form a monophyletic group
 levels(tmclades12)
 tmodel12<-glm(gain~tmclades12,binomial)
 anova(tmodel11,tmodel12,test="Chi")
@@ -579,8 +588,6 @@ anova(cemodel8,tmodel12,test="Chi")
 
 # .. but it is worse than the model that recognized French Dairy and African Beer as high frequency groups (df=2,P=0.004218)
 anova(scmodel12,tmodel12,test="Chi")
-
-
 
 
 
