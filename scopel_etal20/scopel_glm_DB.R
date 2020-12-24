@@ -177,10 +177,11 @@ sum(table(Clades,Ploidy))
 table(droplevels(Aneuploidy_type))
 
 
-# Set up a binary response variable and polyploidy
+# Set up a binary response variable (gain: TRUE or FALSE)
 gain<-Aneuploidy_type=="Gain"
 gain
 
+# Set up a simple polyploidy explanatory variable (polyploidy: diploid or polyploid)
 polyploidy<-Ploidy
 levels(polyploidy)
 polyploidy<-Ploidy
@@ -230,7 +231,7 @@ anova(model6,model7,test="Chi")
 model8<-update(model7, ~. - Clades)
 anova(model7,model8,test="Chi")
 
-# explains 17.9% of deviance AIC=504.54
+# explains 17.9% of deviance AIC=504.54. This simple clade model (model7) is the same as cemodel8 below.
 anova(model7,test="Chi")
 summary(model7)
 (551.48-452.54)/551.48
@@ -377,6 +378,8 @@ anova(cemodel8,ssd1model,test="Chi")
 ssd1model2<-glm(gain~ssd1geno+heterozygosity,binomial)
 anova(cemodel10,ssd1model2,test="Chi")
 
+##########
+# Using the maximum likelihood tree to decide _a priori_ contrasts
 
 # 2. Alpechin is embedded within the 1. Wine European clade
 # I can combine 1. Wine and 2. Alpechin (df=1,P=0.2576)
@@ -491,6 +494,92 @@ anova(cemodel8,scmodel12,test="Chi")
 #    0.08686441     0.38983051     0.59459459     0.26666667     0.37500000             NA 
 table(droplevels(clades12),gain)
 tapply(predict(scmodel12,type="response"),clades12,mean)
+
+
+##########
+# Using the TreeMix tree (6 edges) to decide _a priori_ contrasts
+
+# Wine, Alpechin and Brazilian bioethanol all combine into Clades1_2_3 as above 
+anova(scmodel3,test="Chi")
+
+# 8. Mixed Origin and 11. Ale Beer combine as above
+anova(scmodel3,scmodel5,test="Chi")
+
+# 7. Mosaic Beer is the sister group and is not sig. diff than Clades8_11 (df=1,P=0.9355) 
+tmclades6<-clades5
+levels(tmclades6)[3]<-"Clades7_8_11"
+levels(tmclades6)[22]<-"Clades7_8_11"
+levels(tmclades6)
+tmodel6<-glm(gain~tmclades6,binomial)
+anova(scmodel5,tmodel6,test="Chi")
+
+# Wine-Alpechin-Bioethanol (Clades1_2_3) are sig diff than the high aneuploidy group MosaicBeer-MixedOrigin-AleBeer (Clades7_8_11) (df=1,P=2.721e-08)
+tmclades7<-tmclades6
+levels(tmclades7)[1]<-"Clades1to3_7_8_11"
+levels(tmclades7)[3]<-"Clades1to3_7_8_11"
+levels(tmclades7)
+tmodel7<-glm(gain~tmclades7,binomial)
+anova(tmodel6,tmodel7,test="Chi")
+
+# therefore MediteranneanOak, African_beer and French_dairy don't get combined with the others (because there would be aneuploidy rate heterogeneity
+
+# 9. Mexican agave and 10. French Guiana human are sister taxa and are NOT SIG DIFF (df=1,P=0.1313) as above
+# It does not make sense to try to combine all the groups tested so far 
+# because there was gain heterogeneity 
+tmclades8<-tmclades6
+levels(tmclades8)[22]<-"Clades9_10"
+levels(tmclades8)[2]<-"Clades9_10"
+levels(tmclades8)
+tmodel8<-glm(gain~tmclades8,binomial)
+anova(tmodel6,tmodel8,test="Chi")
+
+
+# 25. Sake and 26. Asian fermentation are sister taxa and are SIG DIFF (df=1,P=5.51e-07) as above
+# It does not make sense to try to combine 24. Asian islands, North American oak or Far East Russian with 25 and 26 
+# because there was gain heterogeneity 
+tmclades9<-tmclades8
+levels(tmclades9)[17:18]<-"Clades25_26"
+levels(tmclades9)
+tmodel9<-glm(gain~tmclades9,binomial)
+anova(tmodel8,tmodel9,test="Chi")
+
+# 12. West African cocoa and 13. African palm wine human are sister taxa and are NOT SIG DIFF (df=1,P=0.08587) 
+# It does not make sense to try to combine all the groups tested so far 
+# because there was gain heterogeneity 
+tmclades10<-tmclades8
+levels(tmclades10)[4:5]<-"Clades12_13"
+levels(tmclades10)
+tmodel10<-glm(gain~tmclades10,binomial)
+anova(tmodel8,tmodel10,test="Chi")
+
+# 20. CHN V and 21. Ecuadorean are sister taxa and are NOT SIG DIFF  (df=1,P=0.5154) as above 
+# It does not make sense to try to combine all the groups tested so far 
+# because there was gain heterogeneity 
+tmclades11<-tmclades10
+levels(tmclades11)[11:12]<-"Clades20_21"
+levels(tmclades11)
+tmodel11<-glm(gain~tmclades11,binomial)
+anova(tmodel10,tmodel11,test="Chi")
+
+
+# Combine all clades with the ancestral proportion of chr2-16 gains (df=16,P=0.1691,AIC=487.27), just 3 proportions 
+tmclades12<-tmclades11
+levels(tmclades12)[1:2]<-"ancestral"
+levels(tmclades12)[3:13]<-"ancestral"
+levels(tmclades12)[4:7]<-"ancestral" # merge in 5. French dairy and 6. French dairy now because they do not form a monophyletic group
+levels(tmclades12)
+tmodel12<-glm(gain~tmclades12,binomial)
+anova(tmodel11,tmodel12,test="Chi")
+anova(tmodel12,test="Chi")
+summary(tmodel12)
+# not as good as the above model for AIC or deviance explained (12.7312%)
+(551.48-481.27)/551.48
+# not signfiicantly worse than all 26 clades (deviance = - 3.22514%, df=23, P=0.1897)
+anova(cemodel8,tmodel12,test="Chi")
+
+# .. but it is worse than the model that recognized French Dairy and African Beer as high frequency groups (df=2,P=0.004218)
+anova(scmodel12,tmodel12,test="Chi")
+
 
 
 
