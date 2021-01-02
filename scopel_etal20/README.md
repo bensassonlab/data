@@ -9,7 +9,7 @@ Saccharomyces cerevisiae phylogeny"
 
 ## Data tables
 
-**peter_scopel_20201002.txt** - Tab delimited text file with information on 1011 strains derived from Peter et al 2018 Table S1, estimated levels of heterozygosity, and allele calls at the SSD1 locus (see Methods). Bellow is a description of each column:
+**TableS1.txt** - Tab delimited text file with information on 1011 strains derived from Peter et al 2018 Table S1, estimated levels of heterozygosity, and allele calls at the SSD1 locus (see Methods). Bellow is a description of each column:
   - Isolate name: Strain name, as defined in the original Supplementary Table S1 in Peter et al 2018;
   - Standardized name: Secondary strain name, as defined in the original Supplementary Table S1 in Peter et al 2018;
   - Isolation: Detailed isolation substrate, as defined in the original Supplementary Table S1 in Peter et al 2018;
