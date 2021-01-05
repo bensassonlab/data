@@ -31,7 +31,7 @@ Saccharomyces cerevisiae phylogeny"
   - ssd1het: Classification of each strain according to the heterozygosity of the SSD1 amino acid sequence (hom - homozygous; het - heterozygous);
   - chr1only: Gain of chr 1 only (TRUE/FALSE). 
 
-**453strains_scopel_20201002.txt** - Tab delimited text file on a filtered subset of 453 strains from peter_scopel_20201002.txt after haploids, mosaics, close relatives etc (see Methods). Description of columns is the same for "peter_scopel_20201002.txt". 
+**453strains_scopel_20201002.txt** - Tab delimited text file on a filtered subset of 453 strains from TableS1.txt after haploids, mosaics, close relatives etc (see Methods). Description of columns is the same for "TableS1.txt". 
 
 ## Phylogenetic trees
 
