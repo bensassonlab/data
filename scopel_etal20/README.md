@@ -37,7 +37,7 @@ Saccharomyces cerevisiae phylogeny"
 
 **Fig6A.tree** - Maximum likelihood phylogenetic tree for the reduced set of 621 strains used for modeling (see Methods). 
 
-**FigS3B.tree** - Maximum likelihood phylogenetic tree for 453 strains (422 diploids and 31 polyploids) after removing closely related strains (genetic distance < 0.000007, see Methods).
+**FigS1B.tree** - Maximum likelihood phylogenetic tree for 453 strains (422 diploids and 31 polyploids) after removing closely related strains (genetic distance < 0.000007, see Methods).
 
 ## Alignment files
 
