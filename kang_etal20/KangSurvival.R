@@ -3,6 +3,7 @@
 ###################################### 
 
 # check R version
+# tested first on 3.5.1 then on 4.0.2
 version
 
 data<-read.table("KangGalleriaData.tsv",header=T)
@@ -21,7 +22,6 @@ data2<-data[data$treatment!="PBS"&data$treatment!="37",]
 nrow(data2)
 attach(data2)
 
-treatment<-droplevels(treatment)
 table(treatment)
 sort(tapply(death,treatment,mean))
 #       50       Fe       MM       Zn     NaCl 
@@ -46,8 +46,8 @@ summary(glmmodel)
 
 
 # Note that releveling so that summary shows results for exp2 and Fe first does not change the results of the model
-ftreat<-relevel(treatment,"Fe")
-expB<-relevel(experiment,"exp2")
+ftreat<-relevel(as.factor(treatment),"Fe")
+expB<-relevel(as.factor(experiment),"exp2")
 glmmodel2<-glmer(death~ftreat+(1|expB),family=Gamma)
 summary(glmmodel2)
 
