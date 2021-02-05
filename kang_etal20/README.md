@@ -6,4 +6,4 @@ Galleria survival data table and R script that accompanies the Kang et al 2021 m
 
 >S. Earl Kang, Brandi N. Celia, Douda Bensasson & Michelle Momany
 
-2 analyses: GLMM with (i) glmer (gamma errors) and (ii) coxme. Tested on R version 3.5.1.
+2 analyses: GLMM with (i) glmer (gamma errors) and (ii) coxme. Tested on R version 3.5.1 and 4.0.2
