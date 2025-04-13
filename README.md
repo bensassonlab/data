@@ -62,3 +62,12 @@ Supplemental tables 1-8: PenaCh2_SupplementalTables.xlsx
 **Chapter 3 Climate can predict the species ranges of sympatric yeasts from forests**
 
 Supplemental tables 3.1-3.5: PenaCh3_SupplementalTables.xlsx
+
+## Supplemental tables for Ward 2025 Dissertation
+
+Ward, A.K. (2025). Developing the wine yeast _Lachancea thermotolerans_ as a model for evolutionary genomics (Publication No. 31846584)[Doctoral dissertation, University of Georgia]. ProQuest Dissertations and Theses Global.
+
+### Ward2025_Dissertation
+Data and supplementary tables for Audrey Ward's 2025 dissertation "Developing the wine yeast _Lachancea thermotolerans_ as a model for evolutionary genomics" at the University of Georgia under the direction of Douda Bensasson.
+
+
